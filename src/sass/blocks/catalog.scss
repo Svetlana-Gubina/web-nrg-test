@@ -123,7 +123,7 @@
     @include list();
     align-items: center;
 
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 .catalog__item {
@@ -131,7 +131,6 @@
     height: 380px;
     @include indent();
     margin-bottom: 20px;
-    // margin-right: 20px;
     margin-left: 18px;
     padding: 20px;
     @include flex();
@@ -157,8 +156,8 @@
     text-decoration: none;
     max-height: 35px;
     overflow: hidden;
-    outline: 1px dashed rebeccapurple;
-
+    text-overflow: ellipsis;
+    
     &:hover,
     &:focus {
         opacity: 0.5;
@@ -173,15 +172,14 @@
     @include indent();
     @include flex();
     justify-content: space-between;
-    // flex-wrap: nowrap;
+    align-items: center;
     margin-top: auto;
 
-    outline: 1px dashed red;
+    outline: 1px dashed blue;
 }
 
 .catalog__item-price {
     @include indent();
-    padding: 0.2em;
     color: #444444;
     font-size: 28px;
     font-weight: 700;
@@ -198,6 +196,7 @@
     box-shadow: 0 none;
     width: 28px;
     height: 21px;
+    margin-right: 10px;
 
     background-image: url("../../img/addtobasket_mini.png");
     background-repeat: no-repeat;
@@ -211,10 +210,9 @@
     justify-content: space-between;
     align-items: center;
 
-    max-width: 250px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+    max-width: 180px;
+    margin-left: 320px;
+    margin-bottom: 52px;
 }
 
 .catalog__pagination-item {
@@ -223,9 +221,8 @@
 
 .catalog__pagination-link {
     display: block;
-    padding: 0.5em;
+    padding: 0.5em 0;
     color: #767676;
-    letter-spacing: 10.17px;
     text-decoration: none;
 
     &:hover,
@@ -248,13 +245,26 @@
     width: 100%;
     max-width: 100%;
     @include flex();
-    justify-content: space-between;
+    justify-content: center;
     align-self: center;
+    margin-bottom: 160px;
 
     border-top: 2px solid #767676;
+
+    outline: 3px dashed crimson;
 }
 
 .catalog__text-paragraph {
     max-width: 45%;
-    padding: 1em;
+    padding: 0.8em 0;
+    padding-right: 0;
+    letter-spacing: 0.5px;
+
+    &:first-of-type {
+        margin-right: 35px;
+    }
+
+    &:last-of-type {
+        padding-right: 0;
+    }
 }

@@ -2,6 +2,7 @@
     @include indent();
     width: 100%;
     max-width: 100%;
+    padding-top: 35px;
     @include flex();
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -17,11 +18,21 @@
     @include indent();
     @include flex();
     flex-direction: column;
+
+    outline: 2px dashed crimson;
+}
+
+.page-footer__paragraph {
+    @include indent();
+    padding: 0.5em 0;
+    padding-bottom: 0;
+    color: #ffffff;
 }
 
 .page-footer__email {
     display: block;
-    padding: 0.5em;
+    // padding: 0.5em;
+    padding: 0;
     color: #ffffff;
     text-decoration: none;
     letter-spacing: 0.35px;
@@ -37,10 +48,12 @@
 }
 
 .page-footer__nav {
+    outline: 2px dashed crimson;
     @include indent();
     @include list();
     @include flex();
     flex-direction: column;
+    padding-top: 5px;
 }
 
 .page-footer__nav-item {
@@ -49,7 +62,8 @@
 
 .page-footer__link {
     display: block;
-    padding: 0.5em;
+    // padding: 0.5em;
+    padding: 0;
     color: #ffffff;
     text-decoration: underline;
     letter-spacing: 0.35px;
@@ -64,16 +78,10 @@
     }
 }
 
-.page-main__paragraph {
-    @include indent();
-    padding: 0.5em;
-    color: #ffffff;
-    letter-spacing: 0.35px;
-}
-
-.page-main__paragraph--dev {
+.page-footer__paragraph--dev {
+    outline: 2px dashed crimson;
     position: relative;
-    max-width: 250px;
+    max-width: 220px;
     padding-right: 50px;
 
     &::before {

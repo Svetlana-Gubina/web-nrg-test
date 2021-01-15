@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Open Sans Condensed";
-  src: local("Open Sans Condensed"),
+  font-family: "Open Sans - Condensed Light";
+  src: local("Open Sans - Condensed Light"),
   url('../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf') format('truetype'), 
   url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.woff2") format("woff2"),
   url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.woff") format("woff");
@@ -10,17 +10,20 @@
 }
 
 body {
-  // @include flex();
-  // justify-content: center;
-  // margin-left: auto;
-  // margin-right: auto;
+  @include indent();
+  @include flex();
+  flex-direction: column;
+  justify-content: center;
   // min-width: $mobile-width;
-  // max-width: $desktop-width;
-  color: black;
+  width: 100%;
+  max-width: 100%;
+  color: #767676;
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 22px;
   background-color: #ffffff;
+
+  min-height: 100vh;
 }
 
 img {

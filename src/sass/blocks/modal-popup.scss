@@ -1,9 +1,13 @@
 .modal-popup { 
+    outline: 3px dashed teal;
+
     position: relative;
     @include indent();
+    padding: 25px 63px;
     min-width: 320px;
-    width: 380px;
+    width: 466px;
     @include flex();
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff;
 }

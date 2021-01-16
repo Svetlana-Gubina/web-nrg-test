@@ -114,5 +114,7 @@ $(function(){
         modal: true,
         type: 'inline',
         animationEffect: "fade",
+        transitionIn: "fade",
+        transitionOut: "fade"
 	});
 });

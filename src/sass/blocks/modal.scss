@@ -6,11 +6,16 @@
     display: none;
 }
 
+.fancybox-content {
+    top: 70px;
+    margin-right: -20px;
+    padding: 0;
+    background-color: transparent;
+}
+
 .modal__title {
     @include indent();
     padding: 0.2em;
-    margin-top: -15px;
-    margin-left: -10px;
     margin-bottom: 22px;
     color: #535353;
     font-size: 24px;
@@ -21,7 +26,7 @@
 }
 
 .modal__form {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     @include indent();
     @include flex();
@@ -67,6 +72,7 @@
     & label {
         @include indent();
         margin-bottom: 3px;
+        padding-left: 5px;
     }
 }
 
@@ -92,8 +98,8 @@
 
 .modal__close {
     position: absolute;
-    top: -50px;
-    right: -50px;
+    top: 0;
+    right: 0;
     width: 27px;
     height: 27px;
     background-color: rgba(0, 0, 0, 0.5);

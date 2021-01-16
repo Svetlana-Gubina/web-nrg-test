@@ -6,6 +6,10 @@
       <title>WebEnergy</title>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+      <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+      <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
       <link rel="stylesheet" href="css/normalize.min.css">
       <link rel="stylesheet" href="css/style.min.css">
    </head>
@@ -18,7 +22,7 @@
             <ul class="page-header__contacts page-header__contacts-list">
                <li class="page-header__contacts-item"><a class="page-header__contacts-link page-header__contacts-tel" href="tel:+74997777777">+7(499) 777-77-77</a></li>
                <li class="page-header__contacts-item"><a class="page-header__contacts-link page-header__contacts-tel" href="tel:+74997777777">+7(499) 777-77-77</a></li>
-               <li class="page-header__contacts-item"><a class="page-header__contacts-link page-header__contacts-feedback" href="#">Обратная связь</a></li>
+               <li class="page-header__contacts-item"><a class="page-header__contacts-link page-header__contacts-feedback" data-fancybox data-src="#hidden-content" href="javascript:;">Обратная связь</a></li>
             </ul>
          </div>
          <nav class="main-nav">
@@ -35,8 +39,12 @@
          </div>
       </header>
       <main class="page-main">
-         <section class="slider">
+         <section class="slider" id="slider">
             <h2 class="visually-hidden">Heading</h2>
+            <div class="slider__slides">
+               <div class="slider__slide slider__slide--1"></div>
+               <div class="slider__slide slider__slide--2"></div>
+            </div>
             <div class="wrapper slider__wrapper">
                <div class="slider__handles">
                   <button class="slider__handles-btn slider__handles-btn--left" type="button"></button>
@@ -141,9 +149,8 @@
          </section>
       </main>
 
-      <div class="modal modal-overlay"></div>
-      <section class="modal modal-popup">
-         <button class="modal__close" type="button">Закрыть</button>
+      <section class="modal modal-popup" id="hidden-content">
+         <button class="modal__close" type="button" onclick="$.fancybox.close(); return false;">Закрыть</button>
          <h2 class="modal__title">Обратная связь</h2>
          <form class="modal__form" action="#" method="post">
              <fieldset class="modal__form-fieldset" style="border: 0;">
@@ -155,13 +162,13 @@
              <fieldset class="modal__form-fieldset" style="border: 0;">
                <div class="modal__form-wrapper">
                   <label for="userPhoneNumber">Телефон *</label>
-                  <input class="modal__input" id="userPhoneNumber" type="text" name="user-phone">
+                  <input class="modal__input" id="userPhoneNumber" type="tel" name="user-phone">
                </div>
              </fieldset>
              <fieldset class="modal__form-fieldset" style="border: 0;">
                <div class="modal__form-wrapper">
                   <label for="userEmail">Email *</label>
-                  <input class="modal__input modal__input--email" id="userEmail" type="text" name="email" value="Поле обязательно для заполнения">
+                  <input class="modal__input modal__input--email" id="userEmail" type="email" name="email" value="Поле обязательно для заполнения">
                </div>
              </fieldset>
              <fieldset class="modal__form-fieldset" style="border: 0;">

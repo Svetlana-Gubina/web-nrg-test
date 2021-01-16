@@ -54,7 +54,7 @@
     max-width: 100%;
     @include flex();
     justify-content: space-between;
-    margin-top: 160px;
+    margin-top: 156px;
 }
 
 .slider__handles-btn {
@@ -84,7 +84,7 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        top: 25%;
+        top: 28%;
         background-color: transparent;
         border-top: 3px solid #000000;
     }
@@ -95,12 +95,12 @@
     &::before {
         border-left: 3px solid #000000;
         transform: rotate(-45deg);
-        left: 45%;
+        left: 40%;
     }
 }
 
 .slider__handles-btn--right {
-    margin-right: 20px;
+    margin-right: 25px;
 
     &::before {
         border-right: 3px solid #000000;

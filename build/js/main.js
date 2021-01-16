@@ -1,9 +1,10 @@
-$.fn.log = function() {
-    console.log.apply(console, this);
-    return this;
-};
-
 $(function() { 
+    // Start autoplay
+    var auto = true;
+     
+    // Pause duration between slides (ms)
+    var pause = 4000;
+
     // Get parent element
     var $this = $('#slider');
  
@@ -24,10 +25,27 @@ $(function() {
     var currentSlide = slides.first();
     var currentSlideIndex = 1;
 
+    // Holds setInterval for autoplay, so we can reset it when user navigates
+    var autoPlay = null;
+
     // Hide all slides except first and add active class to first
     slides.not(':first').css('display', 'none');
     currentSlide.addClass('active');
-    prevSlide.prop('disabled', true);
+
+    // Function responsible for fading to next slide
+    function autoFadeNext() {
+        currentSlide.removeClass('active').fadeOut(700);
+     
+        if(currentSlideIndex == slidesCount) {
+            currentSlide = slides.first();
+            currentSlide.delay(500).addClass('active').fadeIn(700);
+            currentSlideIndex = 1;
+        } else {
+            currentSlideIndex++;
+            currentSlide = currentSlide.next();
+            currentSlide.delay(500).addClass('active').fadeIn(700);
+        }
+    }
 
     // Function responsible for fading to next slide
     function fadeNext() {
@@ -59,17 +77,32 @@ $(function() {
         }
     }
 
+    // Function that starts the autoplay and resets it
+    // in case user navigated (clicked prev or next)
+    function AutoPlay() {
+        clearInterval(autoPlay);
+     
+        if(auto == true) {
+            autoPlay = setInterval(function() {autoFadeNext()}, pause);
+        }
+    }
+
     // Detect if user clicked on arrow for next slide and fade next slide if it did
     $(nextSlide).click(function(e) {
         e.preventDefault();
         fadeNext();
+        AutoPlay();
     });
      
     // Detect if user clicked on arrow for previous slide and fade previous slide if it did
     $(prevSlide).click(function(e) { 
         e.preventDefault();
         fadePrev();
+        AutoPlay();
     });
+
+    // Start autoplay if auto is set to true
+    AutoPlay();
 });
   
 $(function(){

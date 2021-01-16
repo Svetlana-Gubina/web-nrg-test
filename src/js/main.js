@@ -1,8 +1,3 @@
-$.fn.log = function() {
-    console.log.apply(console, this);
-    return this;
-};
-
 $(function() { 
     // Start autoplay
     var auto = true;

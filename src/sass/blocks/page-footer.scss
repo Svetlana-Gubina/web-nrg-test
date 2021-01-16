@@ -12,16 +12,12 @@
 
 .page-footer__wrapper {
     justify-content: space-between;
-
-    outline: 3px dashed crimson;
 }
 
 .page-footer__copyright {
     @include indent();
     @include flex();
     flex-direction: column;
-
-    outline: 2px dashed crimson;
 }
 
 .page-footer__paragraph {
@@ -50,7 +46,6 @@
 }
 
 .page-footer__nav {
-    outline: 2px dashed crimson;
     @include indent();
     @include list();
     @include flex();
@@ -83,10 +78,9 @@
 }
 
 .page-footer__paragraph--dev {
-    outline: 2px dashed crimson;
     position: relative;
     max-width: 220px;
-    padding-left: 45px;
+    padding-left: 40px;
 
     & span {
         text-decoration: underline;
@@ -95,8 +89,8 @@
     &::before {
         content: "";
         position: absolute;
-        top: 15%;
-        left: 0;
+        top: 20%;
+        left: -5%;
         width: 40px;
         height: 40px;
         background-color: transparent;

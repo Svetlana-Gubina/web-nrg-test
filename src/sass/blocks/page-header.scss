@@ -9,8 +9,8 @@
 
 .page-header__wrapper {
     padding: 40px 10px;
-    padding-bottom: 65px;
-    justify-content: center;
+    padding-bottom: 65.5px;
+    justify-content: space-between;
 }
 
 .page-header__logo {
@@ -20,19 +20,19 @@
     width: 27.3%;
     margin-right: auto;
     margin-top: 27px;
-
-    outline: 2px dashed blue;
 }
 
 .page-header__contacts {
     @include indent();
     @include flex();
     flex-direction: column;
-    // align-items: center;
-    width: 25.6%;
+    align-items: center;
+    width: 26.1%;
     margin-left: auto;
-
-    outline: 1px dashed blue;
+    
+    & .page-header__contacts-item:last-child {
+        align-self: flex-end;
+    }
 }
 
 .page-header__contacts-list {
@@ -65,7 +65,7 @@
     line-height: 46px;
     text-align: right;
     text-decoration: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 
     padding: 0;
 }
@@ -78,9 +78,10 @@
     line-height: 1;
     text-align: right;
     letter-spacing: 0.6px;
+    text-decoration: none;
+    margin-right: auto;
 
     border-bottom: 1px dashed #767676;
     padding: 5px 0;
     padding-bottom: 2px;
-    outline: 2px dashed red;
 }

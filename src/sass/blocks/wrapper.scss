@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   max-width: $desktop-width;
-  // min-width: $mobile-width;
+  min-width: $mobile-width;
   @include indent();
   padding: 0 10px;
   margin-right: auto;

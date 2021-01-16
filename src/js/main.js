@@ -74,8 +74,12 @@ $(function() {
   
 $(function(){
 	$(".page-header__contacts-feedback").fancybox({
+        margin: 0,
+        padding: 0,
+        maxWidth: 466,
 		closeBtn: false,
         modal: true,
         type: 'inline',
+        animationEffect: "fade",
 	});
 });

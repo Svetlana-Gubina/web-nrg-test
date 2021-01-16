@@ -149,7 +149,7 @@
          </section>
       </main>
 
-      <section class="modal modal-popup" id="hidden-content">
+      <section class="modal modal-popup" id="hidden-content" style="display: none;">
          <button class="modal__close" type="button" onclick="$.fancybox.close(); return false;">Закрыть</button>
          <h2 class="modal__title">Обратная связь</h2>
          <form class="modal__form" action="#" method="post">
@@ -168,13 +168,13 @@
              <fieldset class="modal__form-fieldset" style="border: 0;">
                <div class="modal__form-wrapper">
                   <label for="userEmail">Email *</label>
-                  <input class="modal__input modal__input--email" id="userEmail" type="email" name="email" value="Поле обязательно для заполнения">
+                  <input class="modal__input modal__input--incorrect" id="userEmail" type="email" name="email" value="Поле обязательно для заполнения">
                </div>
              </fieldset>
              <fieldset class="modal__form-fieldset" style="border: 0;">
                <div class="modal__form-wrapper">
                   <label for="userMessage">Сообщение</label>
-                  <textarea class="modal__textarea" id="userMessage" name="msg" rows="5">
+                  <textarea class="modal__textarea" id="userMessage" name="msg" rows="8">
                </div>
              </fieldset>
              <button class="modal__form-button" type="submit">Отправить</button>
@@ -195,7 +195,7 @@
                <li class="page-footer__nav-item"><a class="page-footer__link" href="#">Контакты</a></li>
             </ul>
             <div class="page-footer__dev">
-               <p class="page-footer__paragraph page-footer__paragraph--dev">Разработка сайта — 
+               <p class="page-footer__paragraph page-footer__paragraph--dev"><span>Разработка сайта</span> — 
                   компания «Пиксель Плюс»</p>
             </div>
          </div>

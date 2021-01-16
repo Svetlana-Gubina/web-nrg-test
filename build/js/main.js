@@ -74,7 +74,7 @@ $(function() {
   
 $(function(){
 	$(".page-header__contacts-feedback").fancybox({
-		// closeBtn: false,
+		closeBtn: false,
         modal: true,
         type: 'inline',
 	});

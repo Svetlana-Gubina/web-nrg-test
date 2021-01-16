@@ -12,6 +12,8 @@
 
 .page-footer__wrapper {
     justify-content: space-between;
+
+    outline: 3px dashed crimson;
 }
 
 .page-footer__copyright {
@@ -53,7 +55,9 @@
     @include list();
     @include flex();
     flex-direction: column;
-    padding-top: 5px;
+    padding-top: 7px;
+
+    margin-right: 130px;
 }
 
 .page-footer__nav-item {
@@ -62,8 +66,8 @@
 
 .page-footer__link {
     display: block;
-    // padding: 0.5em;
     padding: 0;
+    margin-bottom: 5px;
     color: #ffffff;
     text-decoration: underline;
     letter-spacing: 0.35px;
@@ -82,15 +86,22 @@
     outline: 2px dashed crimson;
     position: relative;
     max-width: 220px;
-    padding-right: 50px;
+    padding-left: 45px;
+
+    & span {
+        text-decoration: underline;
+    }
 
     &::before {
         content: "";
         position: absolute;
         top: 15%;
-        right: 100%;
+        left: 0;
         width: 40px;
         height: 40px;
-        background-color: #ffffff;
+        background-color: transparent;
+        background-image: url("../../img/company.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
     }
 }

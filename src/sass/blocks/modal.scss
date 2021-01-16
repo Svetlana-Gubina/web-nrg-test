@@ -9,7 +9,9 @@
 .modal__title {
     @include indent();
     padding: 0.2em;
-    margin-bottom: 20px;
+    margin-top: -15px;
+    margin-left: -10px;
+    margin-bottom: 22px;
     color: #535353;
     font-size: 24px;
     font-weight: 700;
@@ -19,7 +21,7 @@
 }
 
 .modal__form {
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     @include indent();
     @include flex();
@@ -27,7 +29,8 @@
     justify-content: space-between;
     align-items: center;
     flex: auto;
-    outline: 1px dashed red;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .modal__form-fieldset {
@@ -36,7 +39,35 @@
     @include indent();
     border: 0 none;
     margin-bottom: 10px;
-    outline: 1px dashed blue;
+
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(2) {
+        margin-bottom: 16px;
+    }
+
+    &:nth-child(3) {
+        margin-bottom: 14px;
+    }
+
+    & input,
+    & textarea {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        border: 1px solid #c3c3c3;
+    }
+
+    & textarea {
+        padding: 0.5em;
+    }
+
+    & label {
+        @include indent();
+        margin-bottom: 3px;
+    }
 }
 
 .modal__form-wrapper {
@@ -53,19 +84,10 @@
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
     border: none;
     box-shadow: 0 none;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal__input,
-.modal__textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: 0.5em;
-    border: 1px solid #c3c3c3;
 }
 
 .modal__close {
@@ -97,7 +119,7 @@
     }
 }
 
-.modal__input--email {
+.modal__input--incorrect {
     box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
     border: 1px solid #ff8383;
     color: #ff8383;

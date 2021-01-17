@@ -13,7 +13,7 @@
     @include indent();
     @include list();
     @include flex();
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main-nav__item {
@@ -29,7 +29,7 @@
     letter-spacing: 0.75px;
     text-decoration: none;
     color: #ffffff;
-    padding: 1em 0.65em;
+    padding: 1em 0.68em;
     cursor: pointer;
 
     &:hover,

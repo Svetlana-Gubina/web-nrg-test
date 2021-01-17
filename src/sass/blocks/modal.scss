@@ -7,9 +7,9 @@
 }
 
 .fancybox-content {
-    top: 70px;
-    margin-right: -20px;
-    padding: 0;
+    margin-top: 255px;
+    margin-right: -30px;
+    padding: 27px;
     background-color: transparent;
 }
 
@@ -98,8 +98,8 @@
 
 .modal__close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -27px;
+    right: -27px;
     width: 27px;
     height: 27px;
     background-color: rgba(0, 0, 0, 0.5);

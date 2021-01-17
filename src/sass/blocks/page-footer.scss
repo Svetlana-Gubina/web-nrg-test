@@ -2,7 +2,7 @@
     @include indent();
     width: 100%;
     max-width: 100%;
-    padding-top: 35px;
+    padding-top: 40px;
     @include flex();
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -12,12 +12,21 @@
 
 .page-footer__wrapper {
     justify-content: space-between;
+
+    @include media-tablet {
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .page-footer__copyright {
     @include indent();
     @include flex();
     flex-direction: column;
+
+    @include media-tablet {
+        margin-bottom: 20px;
+    }
 }
 
 .page-footer__paragraph {
@@ -29,7 +38,6 @@
 
 .page-footer__email {
     display: block;
-    // padding: 0.5em;
     padding: 0;
     color: #ffffff;
     text-decoration: none;
@@ -53,6 +61,11 @@
     padding-top: 7px;
 
     margin-right: 130px;
+
+    @include media-tablet {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .page-footer__nav-item {
